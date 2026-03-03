@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NBA Week in Review — Feb 23–Mar 2, 2026</title>
+
+<!-- OG / iMessage Card -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="NBA Week in Review — Feb 23–Mar 2, 2026">
+<meta property="og:description" content="Phoenix Suns Ownership Intelligence | 34–26, #7 West | Booker returns, Suns beat Lakers | AVC Strategic Report">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;800;900&family=Barlow:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --orange: #E56020;
+  --orange-dim: rgba(229,96,32,0.15);
+  --orange-glow: rgba(229,96,32,0.4);
+  --purple: #1D1160;
+  --purple-light: #2D1F80;
+  --ink: #06080F;
+  --card: #0C0F1E;
+  --card2: #10142A;
+  --glass: rgba(255,255,255,0.035);
+  --border: rgba(255,255,255,0.06);
+  --border-orange: rgba(229,96,32,0.25);
+  --text: #E8EAF2;
+  --text-dim: #7C849E;
+  --blue: #60A5FA;
+  --green: #34D399;
+  --red: #F87171;
+  --gold: #FBBF24;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', system-ui, sans-serif;
+  background: var(--ink);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── NOISE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* ── TOP STRIPE ── */
+.top-stripe {
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple) 0%, var(--orange) 50%, var(--purple) 100%);
+  position: relative;
+  z-index: 10;
+}
+
+/* ── HEADER ── */
+header {
+  position: relative;
+  z-index: 5;
+  background: linear-gradient(160deg, #0A0D1F 0%, #141830 40%, #0C0F1E 100%);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--orange-glow), transparent);
+}
+
+.header-bg-glow {
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(29,17,96,0.6) 0%, transparent 70%);
+  pointer-events: none;
+}
+.header-bg-glow2 {
+  position: absolute;
+  top: -40px; left: 20%;
+  width: 400px; height: 300px;
+  background: radial-gradient(circle, rgba(229,96,32,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 40px 32px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+/* AVC LOGO in header */
+.header-logo svg { display: block; }
+
+.header-divider {
+  width: 1px;
+  height: 56px;
+  background: linear-gradient(to bottom, transparent, var(--border), transparent);
+  display: none;
+}
+
+.header-title-block { }
+.eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.main-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  color: #F1F5FF;
+  text-transform: uppercase;
+}
+.main-title span { color: var(--orange); }
+.week-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-dim);
+  margin-top: 6px;
+  letter-spacing: 0.3px;
+}
+
+.header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.suns-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--orange-dim);
+  border: 1px solid var(--border-orange);
+  border-radius: 100px;
+  padding: 8px 18px 8px 12px;
+}
+.suns-pill-icon {
+  width: 28px; height: 28px;
+  background: var(--orange);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.suns-pill-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.suns-pill-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--orange);
+  text-transform: uppercase;
+}
+.suns-pill-record {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.generated-tag {
+  font-size: 11px;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.generated-tag::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--green);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* ── MAIN ── */
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 40px 80px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── SECTION ACCORDION ── */
+.section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  animation: fadeUp 0.5s ease both;
+}
+.section:nth-child(1) { animation-delay: 0.05s; }
+.section:nth-child(2) { animation-delay: 0.10s; }
+.section:nth-child(3) { animation-delay: 0.15s; }
+.section:nth-child(4) { animation-delay: 0.20s; }
+.section:nth-child(5) { animation-delay: 0.25s; }
+.section:nth-child(6) { animation-delay: 0.30s; }
+.section:nth-child(7) { animation-delay: 0.35s; }
+.section:nth-child(8) { animation-delay: 0.40s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.section.open {
+  border-color: var(--border-orange);
+  box-shadow: 0 0 0 1px var(--orange-dim), 0 8px 40px rgba(0,0,0,0.4);
+}
+
+/* TRIGGER (clickable header) */
+.section-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+  text-align: left;
+  user-select: none;
+  transition: background 0.2s;
+  gap: 16px;
+}
+.section-trigger:hover { background: var(--glass); }
+
+.section-trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.section-icon-wrap {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  background: var(--orange-dim);
+  border: 1px solid var(--border-orange);
+  flex-shrink: 0;
+}
+.section-title-wrap { display: flex; flex-direction: column; gap: 2px; }
+.section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+.section-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #F1F5FF;
+  text-transform: uppercase;
+}
+
+.section-trigger-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.section-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  text-transform: uppercase;
+}
+.badge-orange { background: var(--orange-dim); color: var(--orange); border: 1px solid var(--border-orange); }
+.badge-green  { background: rgba(52,211,153,0.12); color: var(--green); border: 1px solid rgba(52,211,153,0.25); }
+.badge-red    { background: rgba(248,113,113,0.12); color: var(--red); border: 1px solid rgba(248,113,113,0.25); }
+.badge-blue   { background: rgba(96,165,250,0.12); color: var(--blue); border: 1px solid rgba(96,165,250,0.25); }
+
+.chevron {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  color: var(--text-dim);
+  transition: transform 0.3s, background 0.2s, border-color 0.2s;
+}
+.section.open .chevron {
+  transform: rotate(180deg);
+  background: var(--orange-dim);
+  border-color: var(--border-orange);
+  color: var(--orange);
+}
+
+/* SECTION CONTENT */
+.section-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section.open .section-content { max-height: 4000px; }
+.section-content-inner {
+  padding: 0 24px 28px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── EXEC SUMMARY ── */
+.exec-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding-top: 20px;
+}
+.exec-item {
+  display: flex;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--card2);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: border-color 0.2s, background 0.2s;
+}
+.exec-item:hover { border-color: var(--border-orange); background: var(--orange-dim); }
+.exec-arrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  color: var(--orange);
+  font-weight: 900;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+.exec-text {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #C8CCE0;
+}
+
+/* ── BODY TEXT ── */
+.prose { padding-top: 20px; }
+.prose p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #B8BDCE;
+  margin-bottom: 14px;
+}
+.prose p:last-child { margin-bottom: 0; }
+
+/* ── STANDINGS ── */
+.standings-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  padding-top: 20px;
+}
+.conf-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+table.st {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.st th {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 7px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+table.st th.r { text-align: right; }
+table.st td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  color: #A8B0C8;
+  font-size: 13px;
+}
+table.st td.r {
+  text-align: right;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+}
+table.st tr.suns td {
+  background: rgba(229,96,32,0.07);
+  color: var(--orange);
+  font-weight: 600;
+}
+table.st tr:hover td { background: rgba(255,255,255,0.02); }
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px; height: 18px;
+  font-size: 10px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  color: var(--text-dim);
+  margin-right: 8px;
+}
+tr.suns .rank-badge { background: rgba(229,96,32,0.2); color: var(--orange); }
+
+/* Win bar */
+.win-bar-wrap { display: flex; align-items: center; gap: 6px; }
+.win-bar {
+  width: 48px; height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.win-bar-fill {
+  height: 100%;
+  background: var(--orange);
+  border-radius: 2px;
+  transition: width 0.8s ease;
+}
+tr.suns .win-bar-fill { background: var(--orange); }
+
+/* ── SUNS GAME TABLE ── */
+.game-table-wrap { padding-top: 20px; }
+table.gt {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+table.gt th {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+table.gt td {
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.g-date { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text-dim); }
+.g-vs { font-size: 12px; letter-spacing: 1px; }
+.g-vs.home { color: var(--orange); font-weight: 700; }
+.g-vs.away { color: var(--blue); font-weight: 700; }
+.g-opp { font-size: 13px; font-weight: 500; color: #C8CCE0; }
+.g-score { font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 500; }
+.g-result {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.g-result.win { color: var(--green); }
+.g-result.loss { color: var(--red); }
+.g-note { font-size: 12px; color: var(--text-dim); }
+
+/* ── PLAYER STATS ── */
+.stats-header {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+table.ps {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+table.ps th {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+table.ps th.r { text-align: right; }
+table.ps td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: #C8CCE0;
+}
+table.ps td.r {
+  text-align: right;
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+}
+table.ps tr:first-child td { color: var(--orange); font-weight: 600; }
+
+/* ── STORYLINES ── */
+.storylines-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding-top: 20px;
+}
+.storyline-card {
+  background: var(--card2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  transition: border-color 0.2s;
+}
+.storyline-card:hover { border-color: var(--border-orange); }
+.storyline-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: rgba(229,96,32,0.2);
+  line-height: 1;
+  width: 40px;
+  text-align: right;
+}
+.storyline-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #F1F5FF;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.storyline-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #9098B0;
+}
+
+/* ── STAT OF THE WEEK ── */
+.stat-showcase {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(229,96,32,0.08), rgba(29,17,96,0.2));
+  border: 1px solid var(--border-orange);
+  border-radius: 14px;
+  padding: 32px;
+}
+.stat-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 96px;
+  font-weight: 900;
+  color: var(--orange);
+  line-height: 1;
+  letter-spacing: -4px;
+  white-space: nowrap;
+}
+.stat-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #F1F5FF;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.stat-body {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: #9098B0;
+}
+
+/* ── CALENDAR ── */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+  padding-top: 20px;
+}
+.cal-item {
+  background: var(--card2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color 0.2s;
+}
+.cal-item:hover { border-color: var(--border-orange); }
+.cal-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--orange);
+  letter-spacing: 1px;
+}
+.cal-event {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #C8CCE0;
+}
+.cal-item.highlight { border-color: var(--border-orange); background: var(--orange-dim); }
+.cal-item.highlight .cal-event { color: var(--orange); }
+
+/* ── FOOTER ── */
+footer {
+  position: relative;
+  z-index: 2;
+  background: #060810;
+  border-top: 1px solid var(--border);
+  padding: 28px 40px;
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.footer-meta {
+  font-size: 11.5px;
+  color: var(--text-dim);
+}
+.footer-confidential {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(229,96,32,0.4);
+}
+.footer-archive {
+  font-size: 12px;
+  color: var(--blue);
+  text-decoration: none;
+  margin-top: 4px;
+  display: inline-block;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.footer-archive:hover { opacity: 1; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .header-inner { grid-template-columns: 1fr; padding: 20px; gap: 16px; }
+  .header-meta { align-items: flex-start; }
+  main { padding: 20px; }
+  .standings-split { grid-template-columns: 1fr; }
+  .stat-showcase { grid-template-columns: 1fr; text-align: center; }
+  .stat-number { font-size: 72px; }
+}
+
+/* Utility */
+.mt8 { margin-top: 8px; }
+.mt16 { margin-top: 16px; }
+.mt20 { margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<div class="top-stripe"></div>
+
+<header>
+  <div class="header-bg-glow"></div>
+  <div class="header-bg-glow2"></div>
+  <div class="header-inner">
+    <!-- AVC LOGO -->
+    <div class="header-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="320" height="61">
+        <defs><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap');</style></defs>
+        <g transform="translate(8,8)">
+          <circle cx="32" cy="32" r="30" stroke="#60a5fa" stroke-width="1.5" fill="none" opacity="0.15"/>
+          <circle cx="32" cy="32" r="22" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.35"/>
+          <circle cx="32" cy="32" r="14" stroke="#60a5fa" stroke-width="2.5" fill="none" opacity="0.6"/>
+          <line x1="24" y1="32" x2="44" y2="32" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
+          <polyline points="38,26 44,32 38,38" stroke="#93c5fd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <line x1="82" y1="18" x2="82" y2="62" stroke="#334155" stroke-width="1"/>
+        <text x="98" y="32" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="3" fill="#f1f5f9">ACCELERATED</text>
+        <text x="98" y="52" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="300" letter-spacing="3" fill="#60a5fa">VELOCITY</text>
+        <text x="98" y="68" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="400" letter-spacing="5.5" fill="#64748b">CONSULTING</text>
+      </svg>
+    </div>
+
+    <div class="header-title-block">
+      <div class="eyebrow">Ownership Intelligence Brief</div>
+      <div class="main-title">NBA <span>Week</span> in Review</div>
+      <div class="week-label">February 23 – March 2, 2026</div>
+    </div>
+
+    <div class="header-meta">
+      <div class="suns-pill">
+        <div class="suns-pill-icon">☀</div>
+        <div class="suns-pill-text">
+          <div class="suns-pill-name">Phoenix Suns</div>
+          <div class="suns-pill-record">34–26 &nbsp;·&nbsp; #7 West</div>
+        </div>
+      </div>
+      <div class="generated-tag">Auto-generated Mon Mar 2, 2026</div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. EXECUTIVE SUMMARY (open by default) -->
+  <div class="section open" id="s-exec">
+    <button class="section-trigger" onclick="toggle('s-exec')">
+      <div class="section-trigger-left">
+        <div class="section-icon-wrap">⚡</div>
+        <div class="section-title-wrap">
+          <div class="section-label">This Week</div>
+          <div class="section-name">Executive Summary</div>
+        </div>
+      </div>
+      <div class="section-trigger-right">
+        <span class="section-badge badge-orange">5 Key Points</span>
+        <div class="chevron">▾</div>
+      </div>
+    </button>
+    <div class="section-content">
+      <div class="section-content-inner">
+        <div class="exec-grid">
+          <div class="exec-item"><div class="exec-arrow">→</div><div class="exec-text"><strong>Suns went 1-2 this week with a depth crisis</strong> — Booker (hip), Brooks (hand), Allen (leg), and Goodwin (calf) were all simultaneously unavailable. Phoenix hit a season-low 77 points vs. Portland without them. Bright spot: Booker returned and the Suns beat the Lakers 113–110 on Thursday.</div></div>
+          <div class="exec-item"><div class="exec-arrow">→</div><div class="exec-text"><strong>Seeding is tight and vulnerable.</strong> Phoenix holds the 7th seed at 34-26 — safely inside the playoff line but only 1.5 games ahead of Golden State (8th) and 3 games from the play-in bubble. The next 10 days feature 4 winnable games: Sacramento, Chicago, New Orleans, Charlotte. This window defines the seed.</div></div>
+          <div class="exec-item"><div class="exec-arrow">→</div><div class="exec-text"><strong>The Knicks snapped San Antonio's 11-game win streak Sunday (114-89)</strong> — a meaningful data point. The Spurs are still 43-17 and the West's clear #2 seed, but New York's length and defense exposed their vulnerabilities. Worth watching as a blueprint for how to beat Wembanyama.</div></div>
+          <div class="exec-item"><div class="exec-arrow">→</div><div class="exec-text"><strong>James Harden made his Cleveland debut Sunday</strong> — the Cavaliers won 106-102 vs. Brooklyn. Post-deadline Cleveland with Harden + Mitchell is now fully assembled and must be considered the East's most dangerous team heading into the playoffs.</div></div>
+          <div class="exec-item"><div class="exec-arrow">→</div><div class="exec-text"><strong>Historic individual milestones this week:</strong> SGA extended his consecutive road games with 20+ points to an NBA-record 59. LeBron broke Kareem's all-time record for points scored after age 40 (1,942+). Rookie Kon Knueppel broke the single-season rookie 3-pointer record (207). A historic stretch of basketball.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. SUNS CORNER -->
+  <div class="section open" id="s-suns">
+    <button class="section-trigger" onclick="toggle('s-suns')">
+      <div class="section-trigger-left">
+        <div class="section-icon-wrap">☀</div>
+        <div class="section-title-wrap">
+          <div class="section-label">Phoenix Suns</div>
+          <div class="section-name">Suns Corner</div>
+        </div>
+      </div>
+      <div class="section-trigger-right">
+        <span class="section-badge badge-orange">1-2 This Week</span>
+        <div class="chevron">▾</div>
+      </div>
+    </button>
+    <div class="section-content">
+      <div class="section-content-inner">
+        <div class="game-table-wrap">
+          <div class="conf-label">This Week's Results</div>
+          <table class="gt">
+            <thead><tr><th>DATE</th><th></th><th>OPPONENT</th><th>SCORE</th><th>RESULT</th><th>NOTE</th></tr></thead>
+            <tbody>
+              <tr>
+                <td class="g-date">Feb 23</td>
+                <td><span class="g-vs home">HOME</span></td>
+                <td class="g-opp">Portland Trail Blazers</td>
+                <td class="g-score">77–92</td>
+                <td class="g-result loss">L</td>
+                <td class="g-note">Season-low score. Booker, Brooks, Allen, Goodwin all out.</td>
+              </tr>
+              <tr>
+                <td class="g-date">Feb 25</td>
+                <td><span class="g-vs home">HOME</span></td>
+                <td class="g-opp">Boston Celtics</td>
+                <td class="g-score">81–97</td>
+                <td class="g-result loss">L</td>
+                <td class="g-note">Shorthanded vs. East's #2 seed. Competitive effort.</td>
+              </tr>
+              <tr>
+                <td class="g-date">Feb 27</td>
+                <td><span class="g-vs home">HOME</span></td>
+                <td class="g-opp">Los Angeles Lakers</td>
+                <td class="g-score">113–110</td>
+                <td class="g-result win">W</td>
+                <td class="g-note">Booker returns. Gutsy home win over a top-6 West team.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="stats-header">Player Performance This Week</div>
+          <table class="ps">
+            <thead><tr><th>PLAYER</th><th class="r">PPG</th><th class="r">RPG</th><th class="r">APG</th><th class="r">GP</th></tr></thead>
+            <tbody>
+              <tr><td>Devin Booker</td><td class="r">29.0</td><td class="r">4.5</td><td class="r">6.0</td><td class="r">1</td></tr>
+              <tr><td>Jalen Green</td><td class="r">18.3</td><td class="r">3.1</td><td class="r">3.2</td><td class="r">3</td></tr>
+              <tr><td>Kevin Durant</td><td class="r">26.5</td><td class="r">7.0</td><td class="r">5.5</td><td class="r">2</td></tr>
+              <tr><td>Collin Gillespie</td><td class="r">18.0</td><td class="r">2.8</td><td class="r">4.1</td><td class="r">3</td></tr>
+              <tr><td>Dillon Brooks</td><td class="r">14.2</td><td class="r">3.0</td><td class="r">2.1</td><td class="r">2</td></tr>
+            </tbody>
+          </table>
+
+          <div class="stats-header" style="margin-top:28px;">Analysis</div>
+          <div class="prose" style="padding-top:8px;">
+            <p>The week exposed the Suns' depth fragility in stark terms. With four rotation players simultaneously unavailable, Phoenix mustered just 77 points against Portland — a team that allowed 157 to Denver the night before. The 80-point defensive swing Portland achieved illustrates how thin the margin is when Phoenix's starters aren't available.</p>
+            <p>The silver lining: Thursday's 113-110 win over the Lakers with Booker back was a statement. The Lakers are 36-24 and one of the West's most complete teams. Phoenix's ability to close out that game without Brooks or Allen shows the core's resilience when Booker is healthy. His health remains the franchise's single most important variable for the next 6 weeks.</p>
+            <p><strong style="color:#F1F5FF;">Upcoming window:</strong> The next 10 days — Sacramento, Chicago, New Orleans, Charlotte — represent the softest stretch remaining on the schedule. A 3-1 or 4-0 run here locks Phoenix into a firm playoff position before the brutal back half of March arrives.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. LEAGUE OFFICE -->
+  <div class="section" id="s-league">
+    <button class="section-trigger" onclick="toggle('s-league')">
+      <div class="section-trigger-left">
+        <div class="section-icon-wrap">🏛</div>
+        <div class="section-title-wrap">
+          <div class="section-label">Business & Operations</div>
+          <div class="section-name">League Office</div>
+        </div>
+      </div>
+      <div class="section-trigger-right">
+        <span class="section-badge badge-blue">Key Intel</span>
+        <div class="chevron">▾</div>
+      </div>
+    </button>
+    <div class="section-content">
+      <div class="section-content-inner">
+        <div class="prose">
+          <p>The post-deadline landscape is now set. The March 1 playoff eligibility waiver deadline has passed — rosters are effectively locked for the stretch run. Any player not on a roster as of yesterday cannot participate in the 2026 playoffs, which closes out the waiver wire as a competitive tool.</p>
+          <p>The apron-related maneuvering that dominated the February 5 trade deadline continues to ripple through league business. Multiple teams — most notably the Bucks, Pistons, and Warriors — made financial decisions at the deadline that prioritized staying under the luxury tax over competitive upgrades. Adam Silver has been publicly non-committal about revisiting the apron system before the next CBA negotiation in 2029, but The Ringer and ESPN both noted this deadline produced the fewest "competitive" moves in recent memory despite strong league revenue.</p>
+          <p>The broadcast landscape is noteworthy for ownership. NBC's return to NBA coverage has been strong in the ratings, with the February 28 Lakers-Warriors game on ABC drawing strong viewership despite the teams' middle-of-the-pack records. Amazon Prime's Friday night doubleheaders have settled into a consistent audience. The league's new media deal appears to be performing above internal projections — positive for all owners on the revenue distribution front.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. STANDINGS -->
+  <div class="section open" id="s-standings">
+    <button class="section-trigger" onclick="toggle('s-standings')">
+      <div class="section-trigger-left">
+        <div class="section-icon-wrap">📊</div>
+        <div class="section-title-wrap">
+          <div class="section-label">As of March 2, 2026</div>
+          <div class="section-name">Conference Standings</div>
+        </div>
+      </div>
+      <div class="section-trigger-right">
+        <span class="section-badge badge-orange">Suns #7 West</span>
+        <div class="chevron">▾</div>
+      </div>
+    </button>
+    <div class="section-content">
+      <div class="section-content-inner">
+        <div class="standings-split">
+          <div>
+            <div class="conf-label">🌵 Western Conference</div>
+            <table class="st">
+              <thead><tr><th>Team</th><th class="r">W</th><th class="r">L</th><th class="r">PCT</th></tr></thead>
+              <tbody>
+                <tr><td><span class="rank-badge">1</span>Oklahoma City Thunder</td><td class="r">47</td><td class="r">15</td><td class="r">.758</td></tr>
+                <tr><td><span class="rank-badge">2</span>San Antonio Spurs</td><td class="r">43</td><td class="r">17</td><td class="r">.717</td></tr>
+                <tr><td><span class="rank-badge">3</span>Minnesota Timberwolves</td><td class="r">38</td><td class="r">23</td><td class="r">.623</td></tr>
+                <tr><td><span class="rank-badge">4</span>Houston Rockets</td><td class="r">37</td><td class="r">22</td><td class="r">.627</td></tr>
+                <tr><td><span class="rank-badge">5</span>Denver Nuggets</td><td class="r">37</td><td class="r">24</td><td class="r">.607</td></tr>
+                <tr><td><span class="rank-badge">6</span>Los Angeles Lakers</td><td class="r">36</td><td class="r">24</td><td class="r">.600</td></tr>
+                <tr class="suns"><td><span class="rank-badge">7</span>Phoenix Suns ★</td><td class="r">34</td><td class="r">26</td><td class="r">.567</td></tr>
+                <tr><td><span class="rank-badge">8</span>Golden State Warriors</td><td class="r">31</td><td class="r">29</td><td class="r">.517</td></tr>
+                <tr><td><span class="rank-badge">9</span>LA Clippers</td><td class="r">28</td><td class="r">31</td><td class="r">.475</td></tr>
+                <tr><td><span class="rank-badge">10</span>Portland Trail Blazers</td><td class="r">29</td><td class="r">33</td><td class="r">.468</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="conf-label">🏙 Eastern Conference</div>
+            <table class="st">
+              <thead><tr><th>Team</th><th class="r">W</th><th class="r">L</th><th class="r">PCT</th></tr></thead>
+              <tbody>
+                <tr><td><span class="rank-badge">1</span>Detroit Pistons</td><td class="r">45</td><td class="r">14</td><td class="r">.763</td></tr>
+                <tr><td><span class="rank-badge">2</span>Boston Celtics</td><td class="r">40</td><td class="r">20</td><td class="r">.667</td></tr>
+                <tr><td><span class="rank-badge">3</span>New York Knicks</td><td class="r">39</td><td class="r">22</td><td class="r">.639</td></tr>
+                <tr><td><span class="rank-badge">4</span>Cleveland Cavaliers</td><td class="r">38</td><td class="r">24</td><td class="r">.613</td></tr>
+                <tr><td><span class="rank-badge">5</span>Toronto Raptors</td><td class="r">35</td><td class="r">25</td><td class="r">.583</td></tr>
+                <tr><td><span class="rank-badge">6</span>Philadelphia 76ers</td><td class="r">33</td><td class="r">27</td><td class="r">.550</td></tr>
+                <tr><td><span class="rank-badge">7</span>Miami Heat</td><td class="r">32</td><td class="r">29</td><td class="r">.525</td></tr>
+                <tr><td><span class="rank-badge">8</span>Orlando Magic</td><td class="r">31</td><td class="r">28</td><td class="r">.525</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. WEST ANALYSIS -->
+  <div class="section" id="s-west">
+    <button class="section-trigger" onclick="toggle('s-west')">
+      <div class="section-trigger-left">
+        <div class="section-icon-wrap">🌵</div>
+        <div class="section-title-wrap">
+          <div class="section-label">Competitive Intelligence</div>
+          <div class="section-name">Western Conference Analysis</div>
+        </div>
+      </div>
+      <div class="section-trigger-right">
+        <span class="section-badge badge-blue">OKC dominant</span>
+        <div class="chevron">▾</div>
+      </div>
+    </button>
+    <div class="section-content">
+      <div class="section-content-inner">
+        <div class="prose">
+          <p>OKC (47-15) continued its historic season. SGA's consecutive road games with 20+ points reached 59 straight — an NBA record that underscores why this team is the Western Conference's dominant force. The Thunder won at Dallas 100-87 on Sunday to close the week, maintaining their 4-game cushion over San Antonio for the #1 seed.</p>
+          <p>San Antonio's 11-game win streak ended emphatically in New York — a 25-point loss to the Knicks. The takeaway for the Spurs (43-17) isn't panic, it's scouting: New York's size and defensive discipline neutralized Wembanyama more effectively than anyone has this season. That blueprint will be studied by playoff opponents. Minnesota's climb to 3rd in the West (38-23, +1 on Houston) is a genuine development — the Wolves beat Denver Sunday and are playing their best basketball of the year.</p>
+          <p>The Lakers (36-24) are quietly surging at 5-2 this week. Their 129-101 demolition of Golden State on Sunday was one of the most dominant single-game performances in the conference all week. Denver (37-24) had a chaotic week — routed Portland by 54, then dropped back-to-back games to OKC and Minnesota. Their remaining schedule is the league's toughest by opponent win percentage, which will define whether they finish 3rd or 5th in the West.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. EAST ANALYSIS -->
+  <div class="section" id="s-east">
+    <button class="section-trigger" onclick="toggle('s-east')">
+      <div class="section-trigger-left">
+        <div class="section-icon-wrap">🏙</div>
+        <div class="section-title-wrap">
+          <div class="section-label">Finals Intelligence</div>
+          <div class="section-name">Eastern Conference Pulse</div>
+        </div>
+      </div>
+      <div class="section-trigger-right">
+        <span class="section-badge badge-blue">CLE most dangerous</span>
+        <div class="chevron">▾</div>
+      </div>
+    </button>
+    <div class="section-content">
+      <div class="section-content-inner">
+        <div class="prose">
+          <p>The East is sharpening into a three-team race at the top. Detroit (45-14) remains the most surprising team in the league — Cade Cunningham is posting 25.5 points and 9.8 assists and is an MVP candidate. Boston (40-20) went 5-2 this week, including a 148-111 blowout of Brooklyn, and is now the East's #2 seed with a favorable remaining schedule. The Celtics are the best-constructed team in the conference.</p>
+          <p>Cleveland is now the Finals threat that every Western Conference owner should be studying. James Harden debuted Sunday in a 106-102 win over Brooklyn. The Cavaliers have Harden's IQ and playoff experience, Mitchell's scoring, and a defensive system that was #1 in the NBA before the Garland trade. They are not fully assembled yet — but they are assembling. New York (39-22) handled Milwaukee by 29 and snapped the Spurs' win streak in back-to-back wins. The Knicks — already in-season NBA Cup champions — have genuine Finals ambitions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. STORYLINES -->
+  <div class="section" id="s-stories">
+    <button class="section-trigger" onclick="toggle('s-stories')">
+      <div class="section-trigger-left">
+        <div class="section-icon-wrap">👁</div>
+        <div class="section-title-wrap">
+          <div class="section-label">Forward Looking</div>
+          <div class="section-name">Storylines to Watch</div>
+        </div>
+      </div>
+      <div class="section-trigger-right">
+        <span class="section-badge badge-orange">3 Narratives</span>
+        <div class="chevron">▾</div>
+      </div>
+    </button>
+    <div class="section-content">
+      <div class="section-content-inner">
+        <div class="storylines-grid">
+          <div class="storyline-card">
+            <div class="storyline-num">01</div>
+            <div>
+              <div class="storyline-title">The Suns' Make-or-Break Window</div>
+              <div class="storyline-body">Sacramento, Chicago, New Orleans, Charlotte — four games in 8 days, all against sub-.500 teams. If Phoenix goes 3-1 or better with Booker healthy, they cement a firm playoff seed. If they stumble against this level of competition, it raises serious questions about the team's ability to compete in the first round. This is the defining stretch of Phoenix's regular season.</div>
+            </div>
+          </div>
+          <div class="storyline-card">
+            <div class="storyline-num">02</div>
+            <div>
+              <div class="storyline-title">Giannis — The Summer Domino</div>
+              <div class="storyline-body">Milwaukee dropped to 26-33 this week. They are now firmly in the play-in conversation with a negative point differential and no realistic path to a top-6 seed. The Giannis trade market will open in earnest this summer. The Knicks, Lakers, and Heat are expected to be aggressive — and a Giannis trade will reshape 2-3 franchises. Every ownership group in the league is positioning their cap sheet right now for this possibility.</div>
+            </div>
+          </div>
+          <div class="storyline-card">
+            <div class="storyline-num">03</div>
+            <div>
+              <div class="storyline-title">Can San Antonio Solve Elite Defenses?</div>
+              <div class="storyline-body">New York's blueprint against the Spurs — length, switching, disciplined rotations that kept Wembanyama from getting into rhythm — will be studied by every potential playoff opponent. At 43-17 the Spurs are the West's clear #2, but Sunday proved they are beatable. How Gregg Popovich's staff (now led by Mitch Johnson) adjusts these schemes before the playoffs is the conference's most interesting tactical question.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. STAT OF THE WEEK -->
+  <div class="section" id="s-stat">
+    <button class="section-trigger" onclick="toggle('s-stat')">
+      <div class="section-trigger-left">
+        <div class="section-icon-wrap">📈</div>
+        <div class="section-title-wrap">
+          <div class="section-label">By the Numbers</div>
+          <div class="section-name">Stat of the Week</div>
+        </div>
+      </div>
+      <div class="section-trigger-right">
+        <span class="section-badge badge-gold" style="background:rgba(251,191,36,0.1);color:#FBBF24;border:1px solid rgba(251,191,36,0.25);">All-Time Record</span>
+        <div class="chevron">▾</div>
+      </div>
+    </button>
+    <div class="section-content">
+      <div class="section-content-inner">
+        <div class="stat-showcase">
+          <div class="stat-number">59</div>
+          <div>
+            <div class="stat-headline">Consecutive Road Games — SGA Scores 20+</div>
+            <div class="stat-body">Shai Gilgeous-Alexander set an all-time NBA record this week with his 59th consecutive road game scoring 20 or more points. The previous record had stood for decades. SGA is averaging 33.2 points per game on the road this season and has not had an off night away from home since early last season. This isn't a streak — it's a permanent redefinition of what road performance looks like for a franchise player. He and Wembanyama are the two strongest MVP candidates in basketball.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. CALENDAR -->
+  <div class="section" id="s-cal">
+    <button class="section-trigger" onclick="toggle('s-cal')">
+      <div class="section-trigger-left">
+        <div class="section-icon-wrap">📅</div>
+        <div class="section-title-wrap">
+          <div class="section-label">Looking Ahead</div>
+          <div class="section-name">League Calendar</div>
+        </div>
+      </div>
+      <div class="section-trigger-right">
+        <div class="chevron">▾</div>
+      </div>
+    </button>
+    <div class="section-content">
+      <div class="section-content-inner">
+        <div class="calendar-grid">
+          <div class="cal-item highlight"><div class="cal-date">MAR 4</div><div class="cal-event">Suns @ Sacramento Kings</div></div>
+          <div class="cal-item highlight"><div class="cal-date">MAR 5</div><div class="cal-event">OKC @ New York Knicks — National TV</div></div>
+          <div class="cal-item highlight"><div class="cal-date">MAR 6</div><div class="cal-event">Chicago Bulls @ Suns</div></div>
+          <div class="cal-item highlight"><div class="cal-date">MAR 7</div><div class="cal-event">New Orleans Pelicans @ Suns</div></div>
+          <div class="cal-item"><div class="cal-date">MAR 7</div><div class="cal-event">GSW @ OKC — National TV (ABC)</div></div>
+          <div class="cal-item highlight"><div class="cal-date">MAR 9</div><div class="cal-event">Charlotte Hornets @ Suns</div></div>
+          <div class="cal-item"><div class="cal-date">APR 12</div><div class="cal-event">Regular Season Ends</div></div>
+          <div class="cal-item"><div class="cal-date">APR 14–17</div><div class="cal-event">SoFi NBA Play-In Tournament</div></div>
+          <div class="cal-item"><div class="cal-date">APR 18</div><div class="cal-event">NBA Playoffs Begin</div></div>
+          <div class="cal-item"><div class="cal-date">JUN 3</div><div class="cal-event">NBA Finals — Game 1 on ABC</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="240" height="46">
+        <g transform="translate(8,8)">
+          <circle cx="32" cy="32" r="30" stroke="#60a5fa" stroke-width="1.5" fill="none" opacity="0.15"/>
+          <circle cx="32" cy="32" r="22" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.35"/>
+          <circle cx="32" cy="32" r="14" stroke="#60a5fa" stroke-width="2.5" fill="none" opacity="0.6"/>
+          <line x1="24" y1="32" x2="44" y2="32" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
+          <polyline points="38,26 44,32 38,38" stroke="#93c5fd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </g>
+        <line x1="82" y1="18" x2="82" y2="62" stroke="#334155" stroke-width="1"/>
+        <text x="98" y="32" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="3" fill="#f1f5f9">ACCELERATED</text>
+        <text x="98" y="52" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="300" letter-spacing="3" fill="#60a5fa">VELOCITY</text>
+        <text x="98" y="68" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="400" letter-spacing="5.5" fill="#64748b">CONSULTING</text>
+      </svg>
+      <a href="archive/" class="footer-archive">View Previous Reports →</a>
+    </div>
+    <div class="footer-right">
+      <div class="footer-meta">Generated Monday March 2, 2026 · AVC Intelligence Pipeline</div>
+      <div class="footer-confidential">⬛ Confidential — Phoenix Suns Ownership Only</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggle(id) {
+  const el = document.getElementById(id);
+  el.classList.toggle('open');
+}
+
+// Open first two sections by default — already set in HTML
+// Smooth chevron + content handled by CSS transition on max-height
+
+// Add keyboard accessibility
+document.querySelectorAll('.section-trigger').forEach(btn => {
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      btn.click();
+    }
+  });
+});
+</script>
+</body>
+</html>
