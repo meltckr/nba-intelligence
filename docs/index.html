@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Week in Review — March 09, 2026 – March 16, 2026</title>
+
+    <!-- Open Graph / iMessage / Twitter Card -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="NBA Week in Review — March 09, 2026 – March 16, 2026">
+    <meta property="og:description" content="Phoenix Suns Ownership Intelligence Brief | 0–0, #? in West | AVC Strategic Report">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Accelerated Velocity Consulting">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NBA Week in Review — March 09, 2026 – March 16, 2026">
+    <meta name="twitter:description" content="Phoenix Suns Ownership Intelligence Brief | 0–0, #? in West | AVC Strategic Report">
+    <meta name="twitter:image" content="og-image.png">
+
+    <meta name="description" content="Phoenix Suns Ownership Intelligence Brief | 0–0, #? in West | AVC Strategic Report">
+    <meta name="author" content="Accelerated Velocity Consulting">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --purple: #1D1160;
+            --orange: #E56020;
+            --dark: #080C1C;
+            --card: #0E1328;
+            --card2: #121830;
+            --border: rgba(255,255,255,0.07);
+            --text: #E8EAF0;
+            --muted: #6B7280;
+            --blue: #60A5FA;
+            --gold: #F59E0B;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* TOP ORANGE BAR */
+        .top-bar { height: 5px; background: linear-gradient(90deg, var(--purple), var(--orange), var(--purple)); }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #0A0E22 0%, #1D1160 60%, #0D0828 100%);
+            border-bottom: 1px solid rgba(229,96,32,0.3);
+            padding: 24px 40px;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .header-right {
+            text-align: right;
+        }
+        .report-title {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: var(--orange);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+        .report-week {
+            font-size: 22px;
+            font-weight: 800;
+            color: #F1F5F9;
+            letter-spacing: -0.5px;
+        }
+        .report-meta {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+        .suns-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(229,96,32,0.15);
+            border: 1px solid rgba(229,96,32,0.4);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--orange);
+            margin-top: 8px;
+        }
+
+        /* MAIN LAYOUT */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        /* SECTION BLOCKS */
+        .section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .section-header {
+            background: linear-gradient(90deg, var(--purple), #2A1880);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-icon { font-size: 18px; }
+        .section-title {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #F1F5F9;
+        }
+        .section-body { padding: 24px; }
+        .section-body p {
+            margin-bottom: 14px;
+            font-size: 15px;
+            color: #D1D5DB;
+            line-height: 1.75;
+        }
+        .section-body p:last-child { margin-bottom: 0; }
+
+        /* EXEC SUMMARY */
+        .exec-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .exec-list li {
+            display: flex;
+            gap: 14px;
+            font-size: 15px;
+            color: #D1D5DB;
+            line-height: 1.65;
+            padding: 14px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            border-left: 3px solid var(--orange);
+        }
+        .exec-list li::before {
+            content: "→";
+            color: var(--orange);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* TWO COLUMN LAYOUT for standings */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+        @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+
+        .conf-block h3 {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--orange);
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        /* STANDINGS TABLE */
+        .standings-table, .game-table, .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        .standings-table th, .game-table th, .stats-table th {
+            text-align: left;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--muted);
+            padding: 8px 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .standings-table td, .game-table td, .stats-table td {
+            padding: 9px 12px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: #C9D1E0;
+        }
+        .standings-table .num, .stats-table .stat {
+            text-align: right;
+            font-family: 'DM Mono', monospace;
+            font-size: 13px;
+        }
+        .rank {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            font-size: 10px;
+            font-weight: 700;
+            color: var(--muted);
+            background: rgba(255,255,255,0.06);
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+        .suns-row td {
+            background: rgba(229,96,32,0.08) !important;
+            color: var(--orange) !important;
+            font-weight: 600;
+        }
+        .suns-row .rank { color: var(--orange); background: rgba(229,96,32,0.2); }
+
+        /* GAME TABLE */
+        .game-date { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--muted); }
+        .game-loc { font-size: 10px; font-weight: 700; letter-spacing: 1px; }
+        .game-loc.home { color: var(--orange); }
+        .game-loc.away { color: var(--blue); }
+        .game-score { font-family: 'DM Mono', monospace; font-weight: 600; }
+        .game-result { font-weight: 800; font-size: 13px; letter-spacing: 1px; }
+        .win { color: #22C55E; }
+        .loss { color: #EF4444; }
+        .player-name { font-weight: 600; }
+        .gp { color: var(--muted); }
+
+        /* STORYLINES */
+        .storyline-card {
+            display: flex;
+            gap: 16px;
+            padding: 18px;
+            background: var(--card2);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            margin-bottom: 14px;
+        }
+        .storyline-card:last-child { margin-bottom: 0; }
+        .storyline-num { color: var(--orange); font-size: 18px; flex-shrink: 0; padding-top: 2px; }
+        .storyline-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #F1F5F9;
+            margin-bottom: 6px;
+            letter-spacing: 0.3px;
+        }
+        .storyline-body { font-size: 14px; color: #9CA3AF; line-height: 1.65; }
+
+        /* STAT OF THE WEEK */
+        .stat-block {
+            background: linear-gradient(135deg, rgba(229,96,32,0.12), rgba(29,17,96,0.3));
+            border: 1px solid rgba(229,96,32,0.25);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 80px;
+            font-weight: 800;
+            color: var(--orange);
+            line-height: 1;
+            letter-spacing: -4px;
+            margin-bottom: 8px;
+        }
+        .stat-headline {
+            font-size: 16px;
+            font-weight: 600;
+            color: #F1F5F9;
+            margin-bottom: 12px;
+        }
+        .stat-body { font-size: 14px; color: #9CA3AF; max-width: 600px; margin: 0 auto; line-height: 1.7; }
+
+        /* FOOTER */
+        footer {
+            background: #060910;
+            border-top: 1px solid rgba(229,96,32,0.2);
+            padding: 28px 40px;
+            margin-top: 20px;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-right {
+            font-size: 11px;
+            color: var(--muted);
+            text-align: right;
+        }
+        .confidential {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: rgba(229,96,32,0.5);
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        /* ARCHIVE LINK */
+        .archive-link {
+            display: inline-block;
+            font-size: 12px;
+            color: var(--blue);
+            text-decoration: none;
+            margin-top: 8px;
+        }
+        .archive-link:hover { text-decoration: underline; }
+
+        .no-data { color: var(--muted); font-size: 14px; font-style: italic; }
+
+        /* Suns sub-header */
+        .sub-section-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            color: var(--orange);
+            text-transform: uppercase;
+            margin: 20px 0 10px;
+        }
+        .sub-section-title:first-child { margin-top: 0; }
+    </style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header>
+    <div class="header-inner">
+        <div class="header-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="280" height="53">
+  <defs><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap');</style></defs>
+  <g transform="translate(8, 8)">
+    <circle cx="32" cy="32" r="30" stroke="#60a5fa" stroke-width="1.5" fill="none" opacity="0.15"/>
+    <circle cx="32" cy="32" r="22" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.35"/>
+    <circle cx="32" cy="32" r="14" stroke="#60a5fa" stroke-width="2.5" fill="none" opacity="0.6"/>
+    <line x1="24" y1="32" x2="44" y2="32" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
+    <polyline points="38,26 44,32 38,38" stroke="#93c5fd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <line x1="82" y1="18" x2="82" y2="62" stroke="#334155" stroke-width="1"/>
+  <text x="98" y="32" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="3" fill="#f1f5f9">ACCELERATED</text>
+  <text x="98" y="52" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="300" letter-spacing="3" fill="#60a5fa">VELOCITY</text>
+  <text x="98" y="68" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="400" letter-spacing="5.5" fill="#64748b">CONSULTING</text>
+</svg>
+        </div>
+        <div class="header-right">
+            <div class="report-title">Ownership Intelligence Brief</div>
+            <div class="report-week">NBA Week in Review</div>
+            <div class="report-meta">March 09, 2026 – March 16, 2026</div>
+            <div class="suns-badge">☀ Phoenix Suns &nbsp; 0–0 &nbsp; #? West</div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">⚡</span>
+            <span class="section-title">Executive Summary — What Matters This Week</span>
+        </div>
+        <div class="section-body">
+            <ul class="exec-list">
+                
+            </ul>
+        </div>
+    </div>
+
+    <!-- SUNS CORNER -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">☀</span>
+            <span class="section-title">Suns Corner</span>
+        </div>
+        <div class="section-body">
+            <div class="sub-section-title">This Week's Results</div>
+            
+    <table class="game-table">
+        <thead><tr><th>DATE</th><th></th><th>OPPONENT</th><th>SCORE</th><th></th></tr></thead>
+        <tbody>
+        <tr>
+            <td class="game-date">2026-03-10</td>
+            <td class="game-loc away">AWAY</td>
+            <td class="game-opp">Milwaukee Bucks</td>
+            <td class="game-score">129–114</td>
+            <td class="game-result win">W</td>
+        </tr>
+        <tr>
+            <td class="game-date">2026-03-12</td>
+            <td class="game-loc away">AWAY</td>
+            <td class="game-opp">Indiana Pacers</td>
+            <td class="game-score">123–108</td>
+            <td class="game-result win">W</td>
+        </tr>
+        <tr>
+            <td class="game-date">2026-03-13</td>
+            <td class="game-loc away">AWAY</td>
+            <td class="game-opp">Toronto Raptors</td>
+            <td class="game-score">115–122</td>
+            <td class="game-result loss">L</td>
+        </tr>
+        <tr>
+            <td class="game-date">2026-03-16</td>
+            <td class="game-loc away">AWAY</td>
+            <td class="game-opp">Boston Celtics</td>
+            <td class="game-score">0–0</td>
+            <td class="game-result loss">L</td>
+        </tr></tbody>
+    </table>
+            <div class="sub-section-title" style="margin-top:24px;">Player Performance</div>
+            
+    <table class="stats-table">
+        <thead><tr><th>PLAYER</th><th>PPG</th><th>RPG</th><th>APG</th><th>GP</th></tr></thead>
+        <tbody>
+        <tr>
+            <td class="player-name">Shai Gilgeous-Alexander</td>
+            <td class="stat">35.0</td>
+            <td class="stat">9.0</td>
+            <td class="stat">15.0</td>
+            <td class="stat gp">1</td>
+        </tr>
+        <tr>
+            <td class="player-name">Nikola Jokic</td>
+            <td class="stat">32.0</td>
+            <td class="stat">14.0</td>
+            <td class="stat">13.0</td>
+            <td class="stat gp">1</td>
+        </tr>
+        <tr>
+            <td class="player-name">Jaylin Williams</td>
+            <td class="stat">29.0</td>
+            <td class="stat">12.0</td>
+            <td class="stat">3.0</td>
+            <td class="stat gp">1</td>
+        </tr>
+        <tr>
+            <td class="player-name">Tim Hardaway Jr.</td>
+            <td class="stat">28.0</td>
+            <td class="stat">2.0</td>
+            <td class="stat">2.0</td>
+            <td class="stat gp">1</td>
+        </tr>
+        <tr>
+            <td class="player-name">Ajay Mitchell</td>
+            <td class="stat">24.0</td>
+            <td class="stat">2.0</td>
+            <td class="stat">3.0</td>
+            <td class="stat gp">1</td>
+        </tr></tbody>
+    </table>
+            <div class="sub-section-title" style="margin-top:24px;">Analysis</div>
+            
+        </div>
+    </div>
+
+    <!-- LEAGUE OFFICE -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">🏛</span>
+            <span class="section-title">League Office &amp; Business</span>
+        </div>
+        <div class="section-body">
+            
+        </div>
+    </div>
+
+    <!-- STANDINGS -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">📊</span>
+            <span class="section-title">Conference Standings</span>
+        </div>
+        <div class="section-body">
+            <div class="two-col">
+                <div class="conf-block">
+                    <h3>🌵 Western Conference</h3>
+                    
+    <table class="standings-table">
+        <thead>
+            <tr>
+                <th>TEAM</th><th>W</th><th>L</th><th>PCT</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+                </div>
+                <div class="conf-block">
+                    <h3>🏙 Eastern Conference</h3>
+                    
+    <table class="standings-table">
+        <thead>
+            <tr>
+                <th>TEAM</th><th>W</th><th>L</th><th>PCT</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WEST ANALYSIS -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">🌵</span>
+            <span class="section-title">Western Conference Analysis</span>
+        </div>
+        <div class="section-body">
+            
+        </div>
+    </div>
+
+    <!-- EAST ANALYSIS -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">🏙</span>
+            <span class="section-title">Eastern Conference Pulse</span>
+        </div>
+        <div class="section-body">
+            
+        </div>
+    </div>
+
+    <!-- STORYLINES -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">👁</span>
+            <span class="section-title">Storylines to Watch</span>
+        </div>
+        <div class="section-body">
+            <p></p>
+        </div>
+    </div>
+
+    <!-- STAT OF THE WEEK -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-icon">📈</span>
+            <span class="section-title">Stat of the Week</span>
+        </div>
+        <div class="section-body">
+            <div class="stat-block">
+                <div class="stat-headline">Stat of the Week</div>
+                <div class="stat-body"></div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="280" height="53">
+  <defs><style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap');</style></defs>
+  <g transform="translate(8, 8)">
+    <circle cx="32" cy="32" r="30" stroke="#60a5fa" stroke-width="1.5" fill="none" opacity="0.15"/>
+    <circle cx="32" cy="32" r="22" stroke="#60a5fa" stroke-width="2" fill="none" opacity="0.35"/>
+    <circle cx="32" cy="32" r="14" stroke="#60a5fa" stroke-width="2.5" fill="none" opacity="0.6"/>
+    <line x1="24" y1="32" x2="44" y2="32" stroke="#93c5fd" stroke-width="3" stroke-linecap="round"/>
+    <polyline points="38,26 44,32 38,38" stroke="#93c5fd" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <line x1="82" y1="18" x2="82" y2="62" stroke="#334155" stroke-width="1"/>
+  <text x="98" y="32" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800" letter-spacing="3" fill="#f1f5f9">ACCELERATED</text>
+  <text x="98" y="52" font-family="Inter,Arial,sans-serif" font-size="18" font-weight="300" letter-spacing="3" fill="#60a5fa">VELOCITY</text>
+  <text x="98" y="68" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="400" letter-spacing="5.5" fill="#64748b">CONSULTING</text>
+</svg>
+            <a href="archive/" class="archive-link">View Previous Reports →</a>
+        </div>
+        <div class="footer-right">
+            <div>Generated March 16, 2026 by AVC Intelligence Pipeline</div>
+            <div class="confidential">⬛ Confidential — For Suns Ownership Use Only</div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
